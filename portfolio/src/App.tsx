@@ -1,15 +1,27 @@
-// import React, { Suspense, lazy } from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// const Home = lazy(() => import('./pages/Home'));
-// const About = lazy(() => import('./pages/About'));
-// const ComingSoon = lazy(() => import('./pages/ComingSoon'));
-// const NotFound = lazy(() => import('./pages/NotFound'));
+import { NavBar } from './components/NavBar/NavBar';
+import './App.css';
 
-function App() {
+const Home = lazy(() => import('./components/Home/Home'));
+const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
+const Projects = lazy(() => import('./components/Projects/Projects'));
+const NotFound = lazy(() => import('./components/Page404/Page404'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
+
+export default function App() {
     return (
-        <> Hello World!</>
-    )
+        <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/" Component={Home} />
+                    <Route path="*" Component={NotFound} />
+                    <Route path="/aboutme" Component={AboutMe} />
+                    <Route path="/projects" Component={Projects} />
+                </Routes>
+            </Suspense>
+            <Footer/>
+        </Router>
+    );
 }
-
-export default App;
