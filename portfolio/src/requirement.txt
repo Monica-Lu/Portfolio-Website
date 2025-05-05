@@ -1,0 +1,11 @@
+npm install gh-pages
+
+#Package.json/Script
+
+"predeploy": "npm run build"
+"deploy": "gh-pages -d build"
+
+#Vite.config.js/defineConfig
+
+build: {outDir: 'build' },
+base: '/[Portfolio-Website]/',
