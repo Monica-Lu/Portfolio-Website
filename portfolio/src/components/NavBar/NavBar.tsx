@@ -12,10 +12,10 @@ export const NavBar = () => {
 
             <NavMenu.List className="NavBar-list">
                 <NavMenu.Item>
-                    <NavMenu.Link className='link' href="/aboutme">Status</NavMenu.Link>
+                    <NavMenu.Link className='link' href="/aboutme">About Me</NavMenu.Link>
                 </NavMenu.Item>
                 <NavMenu.Item>
-                    <NavMenu.Link className='link' href="/projects">Status</NavMenu.Link>
+                    <NavMenu.Link className='link' href="/projects">Projects</NavMenu.Link>
                 </NavMenu.Item>
             </NavMenu.List>
         </NavMenu.Root>

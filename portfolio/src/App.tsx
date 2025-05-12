@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-//import { NavBar } from './components/NavBar/NavBar';
+import { NavBar } from './components/NavBar/NavBar';
 import './global.css';
 
 // const Home = lazy(() => import('./components/Home/Home'));
@@ -14,7 +14,7 @@ const NotFound = lazy(() => import('./components/Page404/Page404'));
 export default function App() {
     return (
       <Router>
-        {/*<NavBar />*/}
+        <NavBar />
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<ComingSoon />} />
