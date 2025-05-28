@@ -1,5 +1,7 @@
 import * as NavMenu from "@radix-ui/react-navigation-menu";
 
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
+
 import './NavBar.css';
 
 export const NavBar = () => {
@@ -17,6 +19,7 @@ export const NavBar = () => {
                 <NavMenu.Item>
                     <NavMenu.Link className='link' href="/projects">Projects</NavMenu.Link>
                 </NavMenu.Item>
+                <ThemeToggle />
             </NavMenu.List>
         </NavMenu.Root>
     )

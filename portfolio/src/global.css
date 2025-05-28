@@ -1,46 +1,182 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+@import '@radix-ui/themes/styles.css';
 
-html, body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    min-height: 100vh;
-    position: relative;
-}
-
-button {
-    all: unset;
-}
-
+/* Root variables for custom theming */
 :root {
-    --max-page-width: 1000px;
-    --color-background: #FBF7F3;
-    --color-text: #000000;
-    --color-text-subdued: #4B5563;
-    --height-navbar: 4rem;
-    --margin-main-h: 2rem;
-    --margin-main-v: 0;
-    --margin-paragraph: 1rem;
-    --font-main: "CharisSILW", Georgia, "Times New Roman", Times, serif;
-    --font-code: Menlo, Consolas, Monaco, monospace;
-    --border-radius-small: 0.25em;
-    --border-radius-medium: 0.5em;
-    --border-radius-large: 1em;
-
-    font-family: var(--font-main);
-    scroll-padding-top: var(--height-navbar);
-    background-color: var(--color-background);
-    color: var(--color-text);
-    transition:
-      background-color 0.2s ease-out,
-      color 0.2s ease-out;
+  --background-light: #ffffff;
+  --background-dark: #0d1117;
+  --text-light: #24292f;
+  --text-dark: #f0f6fc;
 }
 
-[data-theme="dark"] {
-    --color-background: #1F2937;
-    --color-text: #FBF7F3;
-    --color-text-subdued: #D1D5DB;
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific styles */
+[data-theme="light"] body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Root variables for custom theming */
+:root {
+  --background-light: #ffffff;
+  --background-dark: #0d1117;
+  --text-light: #24292f;
+  --text-dark: #f0f6fc;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific styles */
+[data-theme="light"] body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* App layout */
+.app-container {
+  min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid;
+}
+
+[data-theme="light"] .header {
+  border-bottom-color: #e1e4e8;
+}
+
+[data-theme="dark"] .header {
+  border-bottom-color: #30363d;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main-content {
+  padding: 4rem 0;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.projects h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="light"] .project-card {
+  background-color: #f6f8fa;
+  border-color: #e1e4e8;
+}
+
+[data-theme="dark"] .project-card {
+  background-color: #161b22;
+  border-color: #30363d;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 1rem;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
