@@ -12,7 +12,7 @@ import './global.css';
 // const Projects = lazy(() => import('./components/Projects/Projects'));
 const ComingSoon = lazy(() => import('./components/ComingSoon/ComingSoon'));
 const NotFound = lazy(() => import('./components/Page404/Page404'));
-// const Footer = lazy(() => import('./components/Footer/Footer'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
 
 const AppContent: React.FC = () => {
   const { theme } = useTheme();
@@ -30,7 +30,7 @@ const AppContent: React.FC = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-          {/*<Footer />*/}
+          <Footer />
         </Router>
       </Theme>
     );
