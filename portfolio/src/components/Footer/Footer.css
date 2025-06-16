@@ -71,6 +71,9 @@
 /* Common styles for both themes */
 .footer {
   transition: all 0.2s ease;
+  width: 100%;
+  position: fixed;
+  bottom: 2.0rem;
 }
 
 .footer-container {
