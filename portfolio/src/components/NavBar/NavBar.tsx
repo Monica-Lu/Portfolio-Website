@@ -20,7 +20,7 @@ export const NavBar = () => {
                     <NavMenu.Link className='link' href="/projects">Projects</NavMenu.Link>
                 </NavMenu.Item>
                 <NavMenu.Item>
-                    <NavMenu.Link className='link' href="/contactme">Contact Me</NavMenu.Link>
+                    <NavMenu.Link className='link' href="/resume">Resume</NavMenu.Link>
                 </NavMenu.Item>
                 <ThemeToggle />
             </NavMenu.List>

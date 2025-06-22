@@ -9,10 +9,11 @@ import './global.css';
 
 // const Home = lazy(() => import('./components/Home/Home'));
 // const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
-// const Projects = lazy(() => import('./components/Projects/Projects'));
+const Projects = lazy(() => import('./components/Projects/Projects'));
 const ComingSoon = lazy(() => import('./components/ComingSoon/ComingSoon'));
 const NotFound = lazy(() => import('./components/Page404/Page404'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
+// const Resume = lazy(() => import('./components/Resume/Resume'));
 
 const AppContent: React.FC = () => {
   const { theme } = useTheme();
@@ -25,8 +26,8 @@ const AppContent: React.FC = () => {
             <Routes>
               <Route path="/" element={<ComingSoon />} />
               <Route path="/aboutme" element={<ComingSoon />} />
-              <Route path="/projects" element={<ComingSoon />} />
-              <Route path="/contactme" element={<ComingSoon />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/resume" element={<ComingSoon />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

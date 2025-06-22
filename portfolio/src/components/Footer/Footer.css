@@ -42,7 +42,6 @@
 
 .footer.light .social-icon {
   color: #6a6c71;
-  transition: color 0.2s ease;
   width: 24px;
   height: 24px;
 }
@@ -70,7 +69,6 @@
 
 /* Common styles for both themes */
 .footer {
-  transition: all 0.2s ease;
   width: 100%;
   position: fixed;
   bottom: 2.0rem;
@@ -109,5 +107,4 @@
 
 .footer-link {
   text-decoration: none;
-  transition: color 0.2s ease;
 }

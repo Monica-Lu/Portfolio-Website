@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon, MobileIcon } from '@radix-ui/react-icons';
+import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon, MobileIcon, FileTextIcon } from '@radix-ui/react-icons';
 import './Footer.css';
 
 interface FooterProps {
@@ -7,13 +7,15 @@ interface FooterProps {
   linkedinUrl?: string;
   email?: string;
   phone?: string;
+  resumeUrl?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({
   githubUrl = 'https://github.com/Monica-Lu',
   linkedinUrl = 'https://www.linkedin.com/in/qingyan-lu-b79913244/',
   email = 'monicalu1128@gmail.com',
-  phone = '+1 (984) 837-3951'
+  phone = '+1 (984) 837-3951',
+  resumeUrl = 'https://drive.google.com/file/d/1bqB2KSOllpnSdM4LR55-6qc6JSRI_hpD/view?usp=sharing'
 }) => {
   return (
     <footer className="footer">
@@ -53,6 +55,16 @@ const Footer: React.FC<FooterProps> = ({
             aria-label="Phone"
           >
             <MobileIcon />
+          </a>
+
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="Resume"
+          >
+            <FileTextIcon />
           </a>
         </div>
 
