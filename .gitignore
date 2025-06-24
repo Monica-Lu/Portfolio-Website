@@ -3,3 +3,5 @@ venv/
 poetry.lock
 .env
 .DS_Store
+
+/node_modules
