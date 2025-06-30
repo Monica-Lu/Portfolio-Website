@@ -70,8 +70,9 @@
 /* Common styles for both themes */
 .footer {
   width: 100%;
-  position: fixed;
-  bottom: 2.0rem;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .footer-container {
