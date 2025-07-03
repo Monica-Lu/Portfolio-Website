@@ -8,7 +8,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import './global.css';
 
 // const Home = lazy(() => import('./components/Home/Home'));
-// const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
+const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
 const ComingSoon = lazy(() => import('./components/ComingSoon/ComingSoon'));
 const NotFound = lazy(() => import('./components/Page404/Page404'));
@@ -25,7 +25,7 @@ const AppContent: React.FC = () => {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<ComingSoon />} />
-              <Route path="/aboutme" element={<ComingSoon />} />
+              <Route path="/aboutme" element={<AboutMe />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/resume" element={<ComingSoon />} />
               <Route path="*" element={<NotFound />} />
