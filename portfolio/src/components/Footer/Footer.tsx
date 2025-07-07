@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({
   linkedinUrl = 'https://www.linkedin.com/in/qingyan-lu-b79913244/',
   email = 'monicalu1128@gmail.com',
   phone = '+1 (984) 837-3951',
-  resumeUrl = 'https://drive.google.com/file/d/1bqB2KSOllpnSdM4LR55-6qc6JSRI_hpD/view?usp=sharing'
+  resumeUrl = '../assets/resume/Monica_Resume_PDF.pdf'
 }) => {
   return (
     <footer className="footer">
